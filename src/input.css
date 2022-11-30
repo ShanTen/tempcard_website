@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-image: url("../images/bg.svg");
-    background-repeat: no-repeat;
-    background-size: 800px;
-    background-position: 90% -25%;
-}
+
 
 .hamburger {
     cursor: pointer;
