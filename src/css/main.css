@@ -2658,10 +2658,6 @@ video {
   height: 2rem;
 }
 
-.h-2\/4 {
-  height: 50%;
-}
-
 .max-h-52 {
   max-height: 13rem;
 }
@@ -2674,16 +2670,16 @@ video {
   width: 80%;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-screen {
   width: 100vw;
 }
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-md {
