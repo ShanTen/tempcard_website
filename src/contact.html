@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <nav class="relative container mx-auto p-6">
+        <div class="flex items-center justify-between">
+            <div class="mr-10 ">
+                <img src="images/logo.svg" alt="logo" />
+            </div>
+            <div class="hidden space-x-12 mt-4 md:flex">
+                <div class="dropdown dropdown-hover">
+                    <label tabindex="0" class="cursor-pointer hover:text-darkGrayishBlue" href="#">Products</label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 w-52">
+                        <li><a href="EH-300S.html">EH 300S</a></li>
+                    </ul>
+                </div>
+                <a class="hover:text-darkGrayishBlue" href="#">Support</a>
+                <a class="hover:text-darkGrayishBlue" href="contact.html">Contact Us</a>
+            </div>
+
+            <a href="#"
+                class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">Enquire
+                Now</a>
+            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        <!-- Hamburger Icon -->
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="menu"
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <div class="dropdown">
+                    <label tabindex="0" class="hover:text-darkGrayishBlue" href="#">Products</label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 w-52">
+                        <li><a>EH 300S</a></li>
+                    </ul>
+                </div>
+                <a href="#">Support</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="md:p-5 mx-auto md:w-[80%] w-full">
+        <h1 class="text-center text-4xl mt-20 font-bold">Contact Us</h1>
+
+        <div class="p-5 md:m-5 lg:space-x-10 items-center flex flex-col lg:flex-row justify-center lg:justify-between">
+            <img src="./images/map-image.png" alt="map-image" class="lg:h-[28rem] h-full">
+            <div class="p-5 text-center space-y-10 mt-10 lg:mt-0">
+                <h1 class="text-2xl lg:text-3xl">Elmec Speciality Heaters</h1>
+                <p class="text-xl">16, Dhanakotti Raja St, Ekkatuthangal, Chennai, Tamil Nadu 600032</p>
+                <p class="text-lg">+91-044-22251931 / 22251930 / 22251024 +91-9551651931
+                </p>
+                <div class="">
+                    <p class="text-lg underline font-light md:cursor-pointer">
+                        support@tempcard.in
+                    </p>
+                    <p class="text-lg underline font-light md:cursor-pointer">
+                        sales@tempcard.in
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-veryDarkGrey">
+        <!-- Flex Container -->
+        <div
+            class="container flex flex-col-reverse justify-between mt-20 px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+            <!-- Logo and social links container -->
+            <div
+                class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+                <div class="mx-auto my-6 text-center items-center text-white md:hidden">
+                    Copyright &copy; 2022, All Rights Reserved
+                </div>
+                <!-- Logo -->
+                <div>
+                    <img src="images/logo.png" class="h-8" alt="" />
+                </div>
+            </div>
+            <!-- List Container -->
+            <div class="flex justify-around space-x-32">
+                <div class="flex flex-row space-x-10 items-center text-white">
+                    <a href="#" class="hover:text-brightRed">Home</a>
+                    <a href="#" class="hover:text-brightRed">Products</a>
+                    <a href="#" class="hover:text-brightRed">Contact Us</a>
+                    <a href="#" class="hover:text-brightRed">Support</a>
+                </div>
+            </div>
+
+            <div class="hidden place-self-center text-white md:block">
+                Tempcard Registered &#174; 2022, All Rights Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
