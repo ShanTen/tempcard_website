@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Support</title>
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -19,15 +19,15 @@
                 <div class="dropdown dropdown-hover">
                     <label tabindex="0" class="cursor-pointer hover:text-darkGrayishBlue" href="#">Products</label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 w-52">
-                        <li><a href="EH-300S.html">EH 300S</a></li>
+                        <li><a href="eh-300s.html">EH 300S</a></li>
                     </ul>
                 </div>
-                <a class="hover:text-darkGrayishBlue" href="support.html">Support</a>
-                <a class="hover:text-darkGrayishBlue font-bold" href="contact.html">Contact Us</a>
+                <a class="hover:text-darkGrayishBlue font-bold" href="support.html">Support</a>
+                <a class="hover:text-darkGrayishBlue" href="contact.html">Contact Us</a>
             </div>
 
             <a href="./enquiry.html"
-                class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">Enquire
+                class="hidden p-3 px-6 pt-2 text-white rounded-full baseline bg-brightRedLight md:block">Enquire
                 Now</a>
             <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
                 <span class="hamburger-top"></span>
@@ -42,7 +42,7 @@
         <!-- Mobile Menu -->
         <div class="md:hidden">
             <div id="menu"
-                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-semibold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
                 <div class="dropdown">
                     <label tabindex="0" class="hover:text-darkGrayishBlue" href="#">Products</label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 w-52">
@@ -50,31 +50,45 @@
                     </ul>
                 </div>
                 <a href="#">Support</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="#">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <div class="md:p-5 mx-auto md:w-[80%] w-full">
-        <h1 class="text-center text-4xl mt-20 text-gray-800">Contact Us</h1>
-
-        <div class="p-5 md:m-5 lg:space-x-10 items-center flex flex-col lg:flex-row justify-center lg:justify-between">
-            <img src="./images/map-image.png" alt="map-image" class="lg:h-[28rem] h-full">
-            <div class="p-5 text-center space-y-10 mt-10 lg:mt-0">
-                <h1 class="text-2xl lg:text-3xl">Elmec Speciality Heaters</h1>
-                <p class="text-xl text-gray-600">16, Dhanakotti Raja St, Ekkatuthangal, Chennai, Tamil Nadu 600032</p>
-                <p class="text-lg text-gray-600">+91-044-22251931 / 22251930 / 22251024 +91-9551651931
-                </p>
-                <div class="">
-                    <p class="text-lg underline font-light md:cursor-pointer">
-                        support@tempcard.in
-                    </p>
-                    <p class="text-lg underline font-light md:cursor-pointer">
-                        sales@tempcard.in
-                    </p>
-                </div>
+    <div class="flex flex-col space-y-10 lg:flex-row-reverse items-center justify-between md:w-2/3 mt-20 mx-auto">
+        <div class="flex flex-col space-y-2 text-center">
+            <h1 class="text-3xl font-semibold text-gray-800">Contact us at</h1>
+            <a class="underline text-gray-600 href=" mailto:sales@tempcard.in">sales@tempcard.in</a>
+            <div class="flex flex-col text-gray-700">
+                <p>+91-044-22251931 / 22251930 / 22251024</p>
+                <p>+91-9551651931</p>
             </div>
         </div>
+
+        <div class="hidden lg:inline-flex divider divider-horizontal">OR</div>
+        <div class="lg:hidden divider w-2/3 mx-auto font-bold divider-vertical">OR</div>
+
+        <form action="" class="flex flex-col space-y-4">
+            <p class="text-gray-600 text-2xl font-semibold text-center lg:text-left">Tell Us Your Requirement</p>
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
+                <input placeholder="Name" class="outline-none flex-1" type="text">
+            </div>
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
+                <input placeholder="Email" class="outline-none flex-1" type="text">
+            </div>
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
+                <select class="outline-none flex-1">
+                    <option value="1">EH-300S</option>
+                </select>
+            </div>
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
+                <textarea class="outline-none" placeholder="Issue" cols="30" rows="8"></textarea>
+            </div>
+            <button
+                class="font-bold px-4 py-3 md:hover:bg-brightRedLight md:active:scale-75 ease-out duration-200 rounded-full bg-brightRed text-white"
+                type="submit">Submit</button>
+        </form>
+
     </div>
 
     <footer class="bg-veryDarkGrey">
