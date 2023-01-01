@@ -27,14 +27,26 @@ app.get("/admin", (req, res) => {
 // routes
 
 app.post("/addSupport", (req, res) => {
-  console.log("Request received");
-  console.log(req.body);
-
   data = req.body;
 
   client
     .create({
       _type: "support",
+      ...data,
+      resolved: false,
+    })
+    .then((doc) => {
+      console.log("Document Created at " + doc.id);
+      res.send("Document Created at " + doc.id);
+    });
+});
+
+app.post("/addEnquiry", (req, res) => {
+  data = req.body;
+
+  client
+    .create({
+      _type: "enquiry",
       ...data,
       resolved: false,
     })

@@ -201,7 +201,11 @@
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(data, null, 2)
-            }).then(() => { console.log("Data Sent Successfully"); formData.reset() })
+            }).then(() => {
+                console.log("Data Sent Successfully");
+                formData.reset();
+                alert("Thank you for submitting your ticket")
+            })
                 .catch((err) => {
                     console.log(err.message)
                 })
