@@ -129,21 +129,21 @@
         <div class="hidden lg:inline-flex divider divider-horizontal">OR</div>
         <div class="lg:hidden divider w-2/3 mx-auto font-bold divider-vertical">OR</div>
 
-        <form onsubmit="sendSupport(event)" class="flex flex-col space-y-4 w-2/3 lg:w-[40%]">
+        <form onsubmit="sendData(event)" id="support-form" class="flex flex-col space-y-4 w-2/3 lg:w-[40%]">
             <p class="text-gray-600 text-2xl font-semibold text-center lg:text-left">Submit a Ticket</p>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <input placeholder="Name" class="outline-none flex-1" type="text">
+                <input placeholder="Name" class="outline-none flex-1" required type="text">
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <input placeholder="Email" class="outline-none flex-1" type="text">
+                <input placeholder="Email" class="outline-none flex-1" required type="text">
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <select class="outline-none flex-1">
+                <select class="outline-none flex-1" required>
                     <option value="EH-300S">EH-300S</option>
                 </select>
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <textarea class="outline-none flex-1" placeholder="Issue" cols="30" rows="8"></textarea>
+                <textarea class="outline-none flex-1" placeholder="Issue" required cols="30" rows="8"></textarea>
             </div>
             <button
                 class="font-bold px-4 py-3 md:hover:bg-brightRedLight md:active:scale-75 ease-out duration-200 rounded-full bg-brightRed text-white"
@@ -183,6 +183,30 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        const sendData = (e) => {
+            e.preventDefault();
+            const formData = document.getElementById("support-form")
+            const [name, email, product, issue] = formData
+            data = {
+                name: name.value,
+                email: email.value,
+                product: product.value,
+                issue: issue.value
+            }
+
+            fetch("/addSupport", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data, null, 2)
+            }).then(() => { console.log("Data Sent Successfully"); formData.reset() })
+                .catch((err) => {
+                    console.log(err.message)
+                })
+        }
+    </script>
 </body>
 
 </html>
