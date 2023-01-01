@@ -39,7 +39,7 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
-      description: 'email',
+      subtitle: 'email',
     },
   },
 })
