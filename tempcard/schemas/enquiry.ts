@@ -26,7 +26,7 @@ export default defineType({
     defineField({
       name: 'issue',
       title: 'Issue',
-      type: 'string',
+      type: 'text',
       readOnly: true,
     }),
     defineField({

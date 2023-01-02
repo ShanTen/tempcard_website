@@ -1,13 +1,19 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'support',
-  title: 'Support',
+  name: 'contact',
+  title: 'Contact Responses',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
       title: 'Name',
+      type: 'string',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'number',
+      title: 'Mobile Number',
       type: 'string',
       readOnly: true,
     }),
@@ -18,14 +24,8 @@ export default defineType({
       readOnly: true,
     }),
     defineField({
-      name: 'product',
-      title: 'Product',
-      type: 'string',
-      readOnly: true,
-    }),
-    defineField({
-      name: 'issue',
-      title: 'Issue',
+      name: 'message',
+      title: 'Message',
       type: 'text',
       readOnly: true,
     }),
