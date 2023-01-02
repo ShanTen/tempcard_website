@@ -55,3 +55,18 @@ app.post("/addEnquiry", (req, res) => {
       res.send("Document Created at " + doc.id);
     });
 });
+
+app.post("/addContact", (req, res) => {
+  data = req.body;
+
+  client
+    .create({
+      _type: "contact",
+      ...data,
+      resolved: false,
+    })
+    .then((doc) => {
+      console.log("Document Created at " + doc.id);
+      res.send("Document Created at " + doc.id);
+    });
+});
