@@ -221,7 +221,7 @@
               </label>
               <input
                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="phoneNumber" type="number" placeholder="" />
+                id="phoneNumber" placeholder="" />
             </div>
           </div>
           <div class="flex flex-wrap -mx-3 mb-6">
@@ -296,18 +296,23 @@
     const sendData = (e) => {
       e.preventDefault();
       const formData = document.getElementById("contact-form-1")
-      const [name, phone, email, message] = formData
+      const [name, phone, email, issue] = formData
+
+      if (!name.value || !email.value || !phone.value || !issue.value) {
+        alert("Please fill all the fields")
+        return
+      }
 
       data = {
         name: name.value,
         number: phone.value,
         email: email.value,
-        message: message.value
+        issue: message.value
       }
 
 
 
-      fetch("/addContact", {
+      fetch("/addEnquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
