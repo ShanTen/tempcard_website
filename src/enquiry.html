@@ -13,9 +13,9 @@
     <nav class="relative container mx-auto p-6">
         <div class="flex items-center justify-between">
             <div class="mr-10 ">
-                       <a href="/" target="_blank" rel="noopener noreferrer">
-        <img src="images/logo.svg" alt="logo" />
-      </a>
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/logo.svg" alt="logo" />
+                </a>
             </div>
             <div class="hidden space-x-12 mt-4 md:flex">
                 <div class="dropdown dropdown-hover">
@@ -76,11 +76,14 @@
                 <input placeholder="Name" class="outline-none flex-1" type="text">
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <input placeholder="Email" class="outline-none flex-1" type="text">
+                <input placeholder="Email" class="outline-none flex-1" type="email">
+            </div>
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
+                <input placeholder="Phone Number" class="outline-none flex-1" type="number">
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
                 <select class="outline-none flex-1">
-                    <option value="1">EH-300S</option>
+                    <option value="EH-300S">EH-300S</option>
                 </select>
             </div>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
@@ -128,10 +131,17 @@
         const sendData = (e) => {
             e.preventDefault();
             const formData = document.getElementById("support-form")
-            const [name, email, product, issue] = formData
+            const [name, email, number, product, issue] = formData
+
+            if (!name.value || !email.value || !number.value || !product.value || !issue.value) {
+                alert("Please fill all the fields")
+                return
+            }
+
             data = {
                 name: name.value,
                 email: email.value,
+                number: number.value,
                 product: product.value,
                 issue: issue.value
             }

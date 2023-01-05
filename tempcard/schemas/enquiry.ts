@@ -18,6 +18,12 @@ export default defineType({
       readOnly: true,
     }),
     defineField({
+      name: 'number',
+      title: 'Phone Number',
+      type: 'string',
+      readOnly: true,
+    }),
+    defineField({
       name: 'product',
       title: 'Product',
       type: 'string',
@@ -26,7 +32,7 @@ export default defineType({
     defineField({
       name: 'issue',
       title: 'Issue',
-      type: 'string',
+      type: 'text',
       readOnly: true,
     }),
     defineField({

@@ -36,8 +36,8 @@ app.post("/addSupport", (req, res) => {
       resolved: false,
     })
     .then((doc) => {
-      console.log("Document Created at " + doc.id);
-      res.send("Document Created at " + doc.id);
+      console.log("Document Created at " + doc._id);
+      res.send("Document Created at " + doc);
     });
 });
 
@@ -51,7 +51,7 @@ app.post("/addEnquiry", (req, res) => {
       resolved: false,
     })
     .then((doc) => {
-      console.log("Document Created at " + doc.id);
-      res.send("Document Created at " + doc.id);
+      console.log("Document Created at " + doc._id);
+      res.send("Document Created at " + doc);
     });
 });

@@ -49,9 +49,9 @@
     <nav class="relative container mx-auto p-6">
         <div class="flex items-center justify-between">
             <div class="mr-10 ">
-                       <a href="/" target="_blank" rel="noopener noreferrer">
-        <img src="images/logo.svg" alt="logo" />
-      </a>
+                <a href="/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/logo.svg" alt="logo" />
+                </a>
             </div>
             <div class="hidden space-x-12 mt-4 md:flex">
                 <div class="dropdown dropdown-hover">
@@ -190,6 +190,12 @@
             e.preventDefault();
             const formData = document.getElementById("support-form")
             const [name, email, product, issue] = formData
+
+            if (!name.value || !email.value || !product.value || !issue.value) {
+                alert("Please fill all the fields")
+                return
+            }
+
             data = {
                 name: name.value,
                 email: email.value,
