@@ -2798,6 +2798,14 @@ video {
   --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
 }
 
+.artboard.phone {
+  width: 320px;
+}
+
+.artboard.\!phone {
+  width: 320px !important;
+}
+
 .divider-horizontal {
   flex-direction: column;
 }

@@ -15,7 +15,7 @@
   <nav class="relative container mx-auto p-6">
     <div class="flex items-center justify-between">
       <div class="mr-10 ">
-               <a href="/" target="_blank" rel="noopener noreferrer">
+               <a href="/">
         <img src="images/logo.svg" alt="logo" />
       </a>
       </div>
@@ -59,24 +59,26 @@
     </div>
   </nav>
 
-  <div class="flex flex-col lg:flex-row justify-between items-center lg:w-[85%] space-x-5 mx-auto"> 
+  <div class="flex flex-col lg:flex-row lg:w-[85%] space-x-5 mx-auto"> 
 
-    <div class="flex flex-col">
+    <div class="flex flex-col w-1/2">
       <div class=" my-10 text-gray-400 p-5 md:p-0">Home / Products / EH-300S</div>
       <div class="flex flex-col md:flex-row">
-        <div class="product">
+        <div class="product  w-full">
           <div class="product__images">
             <div class="main-image-wrapper">
-              <img src="images/Isometeric R Trans.png" alt="google pixel 6" class="product__main-image -z-10"
+              <img src="images/Product_IMG_1.webp"  class="product__main-image -z-10"
                 id="main-image" />
             </div>
             <div class="product__slider-wrap">
               <div class="product__slider">
-                <img src="images/Isometeric R Trans.png" alt="google pixel 6"
-                  class="product__image product__image--active -z-10" />
-                <img src="images/sample.png" alt="google pixel 6" class="product__image" />
-                <img src="images/sample.png" alt="google pixel 6" class="product__image" />
-                <img src="images/sample.png" alt="google pixel 6" class="product__image" />
+                <img src="images/Isometeric R Trans.png"
+                  class="product__image product__image--active -z-10 hidden" />
+                <img src="images/Product_IMG_1.webp"  class="product__image" />
+                <img src="images/Product_IMG_2.webp"  class="product__image" />
+                <img src="images/Product_IMG_3.webp"  class="product__image" />
+                <img src="images/Product_IMG_4.webp"  class="product__image" />
+                <img src="images/Product_IMG_5.webp"  class="product__image" />
               </div>
             </div>
           </div>
@@ -84,10 +86,15 @@
       </div>
     </div>
     <div class="p-10 flex-1 flex flex-col">
-      <h1 class="text-3xl font-medium text-center lg:text-left">EH-300S</h1>
+      <h1 class="text-3xl font-normal  text-center lg:text-left">EH-300S</h1>
+      <p class="mt-10 text-gray-600 font-light text-lg">The EH-300S is a high-performance hot runner controller that is specifically designed for use in a wide variety of industries. 
+        This controller features advanced technology and intuitive controls, making it easy to set up and operate. 
+        It is capable of controlling up to 12 zones, making it perfect for small to medium-sized hot runner systems.
+        It also has built-in safety features, such as over-temperature protection, to ensure safe and reliable operation.</p>
       <button class="py-3 lg:max-w-fit px-6 mt-14 bg-brightRed md:hover:bg-brightRedLight text-white rounded-full">Get a
         quote</button>
-      <p class="text-2xl text-light mt-16">Configuration:</p>
+      <p class="text-2xl font-light mt-16">Configuration:</p>
+      <br>
       <div class="border border-black px-2 mt-2 py-1 lg:w-1/3 flex items-center space-x-2 rounded-lg">
         <select name="" class="flex-1">
           <option value="module">Module</option>
@@ -103,8 +110,8 @@
         </select>
       </div>
       <div class="mt-10">
-        <p class="text-2xl font-light">Specification:</p>
-        <div class="mt-5 flex-1 flex flex-col space-y-2">
+        <p class="text-2xl font-light">Specifications:</p>
+        <div class="mt-5 flex-1 flex flex-col space-y-2 text-gray-600">
           <div class="flex items-center justify-between">
             <p class="font-light text-md md:text-lg lg:text-xl">Operating Power</p>
             <p class="font-extralight text-sm md:text-lg lg:text-xl text-left">: 85-250 VAC , 50/60 Hz</p>
