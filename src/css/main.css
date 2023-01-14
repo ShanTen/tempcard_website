@@ -3081,16 +3081,16 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-2\/3 {
   width: 66.666667%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .max-w-md {
@@ -3439,12 +3439,16 @@ video {
   font-weight: 300;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-normal {
+  font-weight: 400;
 }
 
 .font-extralight {
   font-weight: 200;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -3453,6 +3457,10 @@ video {
 
 .italic {
   font-style: italic;
+}
+
+.leading-8 {
+  line-height: 2rem;
 }
 
 .leading-tight {
