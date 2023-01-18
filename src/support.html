@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <!-- Toast -->
+    <div id="toast-message"></div>
     <!-- Modal -->
     <input type="checkbox" id="my-modal-video" class="modal-toggle" />
     <div class="modal modal-bottom sm:modal-middle">
@@ -186,13 +188,24 @@
     </footer>
     <script src="js/script.js"></script>
     <script>
+
+        const createToast = (message) => {
+            var x = document.getElementById("toast-message");
+            x.innerText = message
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+
+
+
         const sendData = (e) => {
             e.preventDefault();
+            createToast("Sending your ticket...")
             const formData = document.getElementById("support-form")
             const [name, email, product, issue] = formData
 
             if (!name.value || !email.value || !product.value || !issue.value) {
-                alert("Please fill all the fields")
+                createToast("Please fill all the fields")
                 return
             }
 
@@ -212,10 +225,11 @@
             }).then(() => {
                 console.log("Data Sent Successfully");
                 formData.reset();
-                alert("Thank you for submitting your ticket")
+                createToast("Thank you for submitting your ticket")
             })
                 .catch((err) => {
                     console.log(err.message)
+                    createToast("Something went wrong")
                 })
         }
     </script>

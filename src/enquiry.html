@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div id="toast-message"></div>
     <nav class="relative container mx-auto p-6">
         <div class="flex items-center justify-between">
             <div class="mr-10 ">
@@ -128,13 +129,20 @@
     </footer>
     <script src="js/script.js"></script>
     <script>
+        const createToast = (message) => {
+            var x = document.getElementById("toast-message");
+            x.innerText = message
+            x.className = "show";
+            setTimeout(() => { x.className = x.className.replace("show", ""); }, 3000);
+        }
         const sendData = (e) => {
             e.preventDefault();
+            createToast("Thank you for submitting your ticket")
             const formData = document.getElementById("support-form")
             const [name, email, number, product, issue] = formData
 
             if (!name.value || !email.value || !number.value || !product.value || !issue.value) {
-                alert("Please fill all the fields")
+                createToast("Please fill all the fields")
                 return
             }
 
@@ -155,10 +163,11 @@
             }).then(() => {
                 console.log("Data Sent Successfully");
                 formData.reset();
-                alert("Thank you for submitting your ticket")
+                createToast("Thank you for submitting your ticket")
             })
                 .catch((err) => {
                     console.log(err.message)
+                    createToast("Something went wrong")
                 })
         }
     </script>
