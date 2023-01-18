@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./src/css/main.css",
     "dev": "nodemon server.js tailwindcss -i ./src/input.css -o ./src/css/main.css --watch",
-    "watch": "node server.js tailwindcss -i ./src/input.css -o ./src/css/main.css --watch"
+    "watch": "node server.js tailwindcss -i ./src/input.css -o ./src/css/main.css --watch",
+    "start": "npm run dev"
+
   },
   "keywords": [],
   "author": "",
