@@ -55,3 +55,22 @@ app.post("/addEnquiry", (req, res) => {
       res.send("Document Created at " + doc);
     });
 });
+
+const path = require('path');
+
+
+app.get("/Support", (req, res) => {
+  res.sendFile(path.join(__dirname+"/src/support.html"));
+});
+
+app.get("/Contactus", (req, res) => {
+  res.sendFile(path.join(__dirname+"/src/contact.html"));
+});
+
+app.get("/EH300S", (req, res) => {
+  res.sendFile(path.join(__dirname+"/src/EH-300S.html"));
+});
+
+app.get("/enquiry", (req, res) => {
+  res.sendFile(path.join(__dirname+"/src/enquiry.html"));
+});
