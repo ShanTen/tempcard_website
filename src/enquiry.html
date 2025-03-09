@@ -71,7 +71,12 @@
         <div class="hidden lg:inline-flex divider divider-horizontal">OR</div>
         <div class="lg:hidden divider w-2/3 mx-auto font-bold divider-vertical">OR</div>
 
-        <form onsubmit="sendData(event)" id="support-form" class="flex flex-col space-y-4 w-2/3 lg:w-[40%]">
+        <form 
+            id="support-form" 
+            class="flex flex-col space-y-4 w-2/3 lg:w-[40%]"
+            action="https://formspree.io/f/mnnpakpj"
+            method="POST"            
+        >
             <p class="text-gray-600 text-2xl font-semibold text-center lg:text-left">Tell Us Your Requirement</p>
             <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
                 <input placeholder="Name" class="outline-none flex-1" type="text">
