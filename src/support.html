@@ -43,7 +43,8 @@
             <div class="modal-action">
                 <label for="my-modal-instruction"
                     class="btn bg-white border-none text-black hover:bg-white hover:border-none">Cancel</label>
-                <label for="my-modal-instruction" class="btn "><a href="EH 300S_User Manual_v.3.51_TEMP CARD.pdf" target="_blank"> Download Manual</a></label>
+                <label for="my-modal-instruction" class="btn "><a href="EH 300S_User Manual_v.3.51_TEMP CARD.pdf"
+                        target="_blank"> Download Manual</a></label>
             </div>
         </div>
     </div>
@@ -59,14 +60,14 @@
                 <div class="dropdown dropdown-hover">
                     <label tabindex="0" class="cursor-pointer hover:text-darkGrayishBlue" href="#">Products</label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 w-52">
-                         <li><a href="EH-300S.html">EH 300S</a></li>
-          </ul>
-        </div>
-        <a class="hover:text-darkGrayishBlue" href="support.html">Support</a>
-        <a class="hover:text-darkGrayishBlue" href="contact.html">Contact Us</a>
-      </div>
+                        <li><a href="EH-300S.html">EH 300S</a></li>
+                    </ul>
+                </div>
+                <a class="hover:text-darkGrayishBlue" href="support.html">Support</a>
+                <a class="hover:text-darkGrayishBlue" href="contact.html">Contact Us</a>
+            </div>
 
-      <a href="Enquiry"
+            <a href="Enquiry"
                 class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block">Enquire
                 Now</a>
             <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
@@ -133,30 +134,40 @@
         <div class="hidden lg:inline-flex divider divider-horizontal">OR</div>
         <div class="lg:hidden divider w-2/3 mx-auto font-bold divider-vertical">OR</div>
 
-        <form 
-            id="support-form" class="flex flex-col space-y-4 w-2/3 lg:w-[40%]"
-            action="https://formspree.io/f/xjkybqyy"
-            method="POST"            
-        >
-            <p class="text-gray-600 text-2xl font-semibold text-center lg:text-left">Submit a Ticket</p>
-            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <input placeholder="Name" class="outline-none flex-1" required type="text">
+        <form id="support-form" class="flex flex-col space-y-4 w-2/3 lg:w-[40%]"
+            action="https://formspree.io/f/xjkybqyy" method="POST" spock-updated="true">
+            <p class="text-gray-600 text-2xl font-semibold text-center lg:text-left" spock-updated="true">
+                Submit a Ticket
+            </p>
+
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg" spock-updated="true">
+                <input placeholder="Name" class="outline-none flex-1" required type="text" name="name"
+                    spock-updated="true">
             </div>
-            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <input placeholder="Email" class="outline-none flex-1" required type="text">
+
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg" spock-updated="true">
+                <input placeholder="Email" class="outline-none flex-1" required type="email" name="email"
+                    spock-updated="true">
             </div>
-            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <select class="outline-none flex-1" required>
+
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg" spock-updated="true">
+                <select class="outline-none flex-1" required name="product" spock-updated="true">
                     <option value="EH-300S">EH-300S</option>
                 </select>
             </div>
-            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg">
-                <textarea class="outline-none flex-1" placeholder="Issue" required cols="30" rows="8"></textarea>
+
+            <div class="border border-black px-4 py-3 flex items-center space-x-2 rounded-lg" spock-updated="true">
+                <textarea class="outline-none flex-1" placeholder="Issue" required cols="30" rows="8" name="issue"
+                    spock-updated="true"></textarea>
             </div>
+
             <button
                 class="font-bold px-4 py-3 md:hover:bg-brightRedLight md:active:scale-75 ease-out duration-200 rounded-full bg-brightRed text-white"
-                type="submit">Submit</button>
+                type="submit" spock-updated="true">
+                Submit
+            </button>
         </form>
+
 
     </div>
 
